@@ -44,6 +44,8 @@
 		3982FFF817B04E5000528599 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3982FFF617B04E5000528599 /* InfoPlist.strings */; };
 		3982FFFA17B04E5000528599 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3982FFF917B04E5000528599 /* main.m */; };
 		3982FFFE17B04E5000528599 /* SENSRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3982FFFD17B04E5000528599 /* SENSRAppDelegate.m */; };
+		398CD08417B9900A00984475 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398CD08317B9900A00984475 /* AboutUsViewController.m */; };
+		398CD08A17B9930E00984475 /* Grass_Sky_Tree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 398CD08917B9930E00984475 /* Grass_Sky_Tree.jpg */; };
 		39958DDE17B4E21D00887DF5 /* greenButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 39958DDD17B4E21D00887DF5 /* greenButtonHighlight.png */; };
 		39958DE017B4E23200887DF5 /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 39958DDF17B4E23200887DF5 /* greenButton.png */; };
 		39958DE217B4E38500887DF5 /* report_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 39958DE117B4E38500887DF5 /* report_btn.png */; };
@@ -121,6 +123,9 @@
 		3982FFFC17B04E5000528599 /* SENSRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSRAppDelegate.h; sourceTree = "<group>"; };
 		3982FFFD17B04E5000528599 /* SENSRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SENSRAppDelegate.m; sourceTree = "<group>"; };
 		3982FFFF17B04E5000528599 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		398CD08217B9900A00984475 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		398CD08317B9900A00984475 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		398CD08917B9930E00984475 /* Grass_Sky_Tree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grass_Sky_Tree.jpg; sourceTree = "<group>"; };
 		39958DDD17B4E21D00887DF5 /* greenButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButtonHighlight.png; sourceTree = "<group>"; };
 		39958DDF17B4E23200887DF5 /* greenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButton.png; sourceTree = "<group>"; };
 		39958DE117B4E38500887DF5 /* report_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = report_btn.png; sourceTree = "<group>"; };
@@ -226,6 +231,8 @@
 				393534B217B8D53900C4FA06 /* DataImageViewController.m */,
 				396B8CBF17B974D8002322D2 /* SettingsTableViewController.h */,
 				396B8CC017B974D8002322D2 /* SettingsTableViewController.m */,
+				398CD08217B9900A00984475 /* AboutUsViewController.h */,
+				398CD08317B9900A00984475 /* AboutUsViewController.m */,
 				3959B6A117B7915C00E16109 /* Annotation.h */,
 				3959B6A317B7915C00E16109 /* Annotation.m */,
 				3959B6A617B7916A00E16109 /* AnnotationType.h */,
@@ -249,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				39B47D7E17B8DBE800AD5BE0 /* pin.png */,
+				398CD08917B9930E00984475 /* Grass_Sky_Tree.jpg */,
 				39B104DC17B8785300C4B09C /* blueButtonHighlight@2x.png */,
 				39B5681D17B86A910070DBCD /* blueButton.png */,
 				399979DE17B5834000B4E92B /* button_grey.png */,
@@ -346,6 +354,7 @@
 				39B104DD17B8785300C4B09C /* blueButtonHighlight@2x.png in Resources */,
 				39B47D7F17B8DBE800AD5BE0 /* pin.png in Resources */,
 				396B8CC317B98198002322D2 /* Default.png in Resources */,
+				398CD08A17B9930E00984475 /* Grass_Sky_Tree.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +388,7 @@
 				3953989F17B8AE270098B499 /* AnnotationTableViewController.m in Sources */,
 				393534B317B8D53A00C4FA06 /* DataImageViewController.m in Sources */,
 				396B8CC117B974D9002322D2 /* SettingsTableViewController.m in Sources */,
+				398CD08417B9900A00984475 /* AboutUsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

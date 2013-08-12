@@ -12,6 +12,7 @@
 #import "Data.h"
 
 @interface ReportTableViewController : UITableViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UIAlertViewDelegate>{
+    NSUserDefaults *prefs;
     UIButton *cancelButton;
     Project *project;
     Data *data;
@@ -50,6 +51,7 @@
 @property (nonatomic, retain) UILabel *loadingLabel;
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSUserDefaults *prefs;
 
 @property (nonatomic, assign) int numTextfield;
 @property (nonatomic, assign) int numTab2;

@@ -35,6 +35,7 @@
 @synthesize annotationData;
 @synthesize activeField;
 @synthesize centerY;
+@synthesize prefs;
 
 #define PHOTO_SECTION    0
 #define DATA_SECTION     1
@@ -81,6 +82,7 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
     
     SENSRAppDelegate *appDelegate = (SENSRAppDelegate *)[[UIApplication sharedApplication]delegate];
     managedObjectContext = [appDelegate managedObjectContext];
+    prefs = [NSUserDefaults standardUserDefaults];
     
     if(isMyData) {
         project = data.project;
@@ -424,6 +426,16 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
         // create a post string to save
         NSString *imageName = [NSString stringWithFormat:@"%@_%@.jpg", project.uniqueID,[NSNumber numberWithInt:[[NSDate date] timeIntervalSince1970]]];
         NSString *post = [NSString stringWithFormat:@"uniqueID=%@&_reported_timestamp=%0.0f&_latitude=%f&_longitude=%f", project.uniqueID, [[NSDate date] timeIntervalSince1970], currentLocation.latitude, currentLocation.longitude];
+        
+        if([prefs boolForKey:@"ExposeProfile"]){
+            post = [post stringByAppendingString:@"&_userName='"];
+            post = [post stringByAppendingString:[prefs objectForKey:@"Name"]];
+            post = [post stringByAppendingString:@"'&_userEmail='"];
+            post = [post stringByAppendingString:[prefs objectForKey:@"Email"]];
+            post = [post stringByAppendingString:@"'&_location='"];
+            post = [post stringByAppendingString:[prefs objectForKey:@"Location"]];
+            post = [post stringByAppendingString:@"''"];
+        }
         
         for(int i=0;i<[dataToUpload count];i++){
             NSString *key = [labelsArray objectAtIndex:i];
