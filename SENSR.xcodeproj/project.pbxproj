@@ -20,6 +20,7 @@
 		3959B6A817B7916B00E16109 /* AnnotationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3959B6A717B7916A00E16109 /* AnnotationType.m */; };
 		3968486317B099B200FA9D86 /* SENSRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3968486217B099B200FA9D86 /* SENSRViewController.m */; };
 		396A113417B44B1E00453F1A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396A113317B44B1E00453F1A /* CoreLocation.framework */; };
+		396B8CC117B974D9002322D2 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396B8CC017B974D8002322D2 /* SettingsTableViewController.m */; };
 		396EEBDE17B1E984008FB2A2 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 396EEBDD17B1E983008FB2A2 /* Project.m */; };
 		3982000017B04E5000528599 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982FFFF17B04E5000528599 /* Default.png */; };
 		3982000217B04E5000528599 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982000117B04E5000528599 /* Default@2x.png */; };
@@ -85,6 +86,8 @@
 		3968486117B099B200FA9D86 /* SENSRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SENSRViewController.h; sourceTree = "<group>"; };
 		3968486217B099B200FA9D86 /* SENSRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SENSRViewController.m; sourceTree = "<group>"; };
 		396A113317B44B1E00453F1A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		396B8CBF17B974D8002322D2 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		396B8CC017B974D8002322D2 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		396EEBDC17B1E983008FB2A2 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		396EEBDD17B1E983008FB2A2 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		3982000117B04E5000528599 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 				3946084817B6FD2C004BD207 /* MyDataTableViewController.m */,
 				393534B117B8D53900C4FA06 /* DataImageViewController.h */,
 				393534B217B8D53900C4FA06 /* DataImageViewController.m */,
+				396B8CBF17B974D8002322D2 /* SettingsTableViewController.h */,
+				396B8CC017B974D8002322D2 /* SettingsTableViewController.m */,
 				3959B6A117B7915C00E16109 /* Annotation.h */,
 				3959B6A317B7915C00E16109 /* Annotation.m */,
 				3959B6A617B7916A00E16109 /* AnnotationType.h */,
@@ -371,6 +376,7 @@
 				3959B6A817B7916B00E16109 /* AnnotationType.m in Sources */,
 				3953989F17B8AE270098B499 /* AnnotationTableViewController.m in Sources */,
 				393534B317B8D53A00C4FA06 /* DataImageViewController.m in Sources */,
+				396B8CC117B974D9002322D2 /* SettingsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
