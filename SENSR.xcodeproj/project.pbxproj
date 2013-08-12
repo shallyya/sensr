@@ -7,13 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39005D0017B2BDE1009BD175 /* MyProjectsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39005CFF17B2BDE1009BD175 /* MyProjectsTableViewController.m */; };
+		391AFD4A17B4F2FA001B18A0 /* ReportTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 391AFD4917B4F2FA001B18A0 /* ReportTableViewController.m */; };
+		393534B317B8D53A00C4FA06 /* DataImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 393534B217B8D53900C4FA06 /* DataImageViewController.m */; };
+		3935C0C017B1A0B20064D436 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3935C0BF17B1A0B20064D436 /* QuartzCore.framework */; };
+		3942419E17B6F5890018A7B1 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3942419D17B6F5890018A7B1 /* Profile.m */; };
+		394241A417B6F6D10018A7B1 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 394241A317B6F6D10018A7B1 /* Data.m */; };
+		3946084917B6FD2C004BD207 /* MyDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3946084817B6FD2C004BD207 /* MyDataTableViewController.m */; };
+		3946084C17B6FED4004BD207 /* DataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3946084B17B6FED4004BD207 /* DataTableViewCell.m */; };
+		3951137917B217B600035D09 /* AddProjectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3951137817B217B600035D09 /* AddProjectTableViewController.m */; };
+		3953989F17B8AE270098B499 /* AnnotationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3953989E17B8AE270098B499 /* AnnotationTableViewController.m */; };
+		3959B6A817B7916B00E16109 /* AnnotationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3959B6A717B7916A00E16109 /* AnnotationType.m */; };
+		3968486317B099B200FA9D86 /* SENSRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3968486217B099B200FA9D86 /* SENSRViewController.m */; };
+		396A113417B44B1E00453F1A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396A113317B44B1E00453F1A /* CoreLocation.framework */; };
+		396EEBDE17B1E984008FB2A2 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 396EEBDD17B1E983008FB2A2 /* Project.m */; };
 		3982000017B04E5000528599 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982FFFF17B04E5000528599 /* Default.png */; };
 		3982000217B04E5000528599 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982000117B04E5000528599 /* Default@2x.png */; };
 		3982000417B04E5000528599 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982000317B04E5000528599 /* Default-568h@2x.png */; };
 		3982000717B04E5000528599 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3982000517B04E5000528599 /* MainStoryboard.storyboard */; };
 		3982000A17B04E5100528599 /* SENSR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3982000817B04E5100528599 /* SENSR.xcdatamodeld */; };
-		3982000D17B04E5100528599 /* SENSRMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3982000C17B04E5100528599 /* SENSRMasterViewController.m */; };
-		3982001017B04E5100528599 /* SENSRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3982000F17B04E5100528599 /* SENSRDetailViewController.m */; };
+		3982001717B04ED400528599 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982001617B04ED400528599 /* icon.png */; };
+		3982002217B0555A00528599 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3982002117B0555A00528599 /* CategoryTableViewController.m */; };
+		3982002D17B05B0900528599 /* ProjectListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3982002C17B05B0900528599 /* ProjectListTableViewController.m */; };
+		3982003017B05EEF00528599 /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3982002F17B05EEF00528599 /* ProjectViewController.m */; };
+		3982003A17B0621600528599 /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3982003917B0621600528599 /* ProjectTableViewCell.m */; };
+		3982003F17B0656700528599 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982003B17B0656700528599 /* first.png */; };
+		3982004017B0656700528599 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982003C17B0656700528599 /* second.png */; };
+		3982004117B0656700528599 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982003D17B0656700528599 /* third.png */; };
+		3982004217B0656700528599 /* fourth.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982003E17B0656700528599 /* fourth.png */; };
 		3982FFEC17B04E5000528599 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3982FFEB17B04E5000528599 /* UIKit.framework */; };
 		3982FFEE17B04E5000528599 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3982FFED17B04E5000528599 /* Foundation.framework */; };
 		3982FFF017B04E5000528599 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3982FFEF17B04E5000528599 /* CoreGraphics.framework */; };
@@ -21,17 +42,69 @@
 		3982FFF817B04E5000528599 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3982FFF617B04E5000528599 /* InfoPlist.strings */; };
 		3982FFFA17B04E5000528599 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3982FFF917B04E5000528599 /* main.m */; };
 		3982FFFE17B04E5000528599 /* SENSRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3982FFFD17B04E5000528599 /* SENSRAppDelegate.m */; };
+		39958DDE17B4E21D00887DF5 /* greenButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 39958DDD17B4E21D00887DF5 /* greenButtonHighlight.png */; };
+		39958DE017B4E23200887DF5 /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 39958DDF17B4E23200887DF5 /* greenButton.png */; };
+		39958DE217B4E38500887DF5 /* report_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 39958DE117B4E38500887DF5 /* report_btn.png */; };
+		399979DD17B5833400B4E92B /* no_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 399979DC17B5833400B4E92B /* no_photo.png */; };
+		399979E017B5834000B4E92B /* button_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 399979DE17B5834000B4E92B /* button_grey.png */; };
+		399979E117B5834000B4E92B /* button_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 399979DF17B5834000B4E92B /* button_green.png */; };
+		39B104DD17B8785300C4B09C /* blueButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B104DC17B8785300C4B09C /* blueButtonHighlight@2x.png */; };
+		39B47D7F17B8DBE800AD5BE0 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B47D7E17B8DBE800AD5BE0 /* pin.png */; };
+		39B5681E17B86A910070DBCD /* blueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B5681D17B86A910070DBCD /* blueButton.png */; };
+		39D5323417B35612008B2427 /* FindByIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D5323317B35612008B2427 /* FindByIdViewController.m */; };
+		39DCDCD117B36DE100D955D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DCDCD017B36DE000D955D8 /* MapKit.framework */; };
+		39DCDCD517B36EF700D955D8 /* MyProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DCDCD417B36EF700D955D8 /* MyProjectViewController.m */; };
+		39E52AF417B4BEDA00174738 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E52AF217B4BD2900174738 /* Reachability.m */; };
+		39E52AF617B4BF5400174738 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E52AF517B4BF5400174738 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39005CFE17B2BDE1009BD175 /* MyProjectsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectsTableViewController.h; sourceTree = "<group>"; };
+		39005CFF17B2BDE1009BD175 /* MyProjectsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectsTableViewController.m; sourceTree = "<group>"; };
+		391AFD4817B4F2FA001B18A0 /* ReportTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportTableViewController.h; sourceTree = "<group>"; };
+		391AFD4917B4F2FA001B18A0 /* ReportTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportTableViewController.m; sourceTree = "<group>"; };
+		393534B117B8D53900C4FA06 /* DataImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataImageViewController.h; sourceTree = "<group>"; };
+		393534B217B8D53900C4FA06 /* DataImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataImageViewController.m; sourceTree = "<group>"; };
+		3935C0BF17B1A0B20064D436 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3942419C17B6F5890018A7B1 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Profile.h; path = ../Profile.h; sourceTree = "<group>"; };
+		3942419D17B6F5890018A7B1 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Profile.m; path = ../Profile.m; sourceTree = "<group>"; };
+		394241A217B6F6D10018A7B1 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		394241A317B6F6D10018A7B1 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		3946084717B6FD2C004BD207 /* MyDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDataTableViewController.h; sourceTree = "<group>"; };
+		3946084817B6FD2C004BD207 /* MyDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDataTableViewController.m; sourceTree = "<group>"; };
+		3946084A17B6FED4004BD207 /* DataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewCell.h; sourceTree = "<group>"; };
+		3946084B17B6FED4004BD207 /* DataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewCell.m; sourceTree = "<group>"; };
+		3951137717B217B600035D09 /* AddProjectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProjectTableViewController.h; sourceTree = "<group>"; };
+		3951137817B217B600035D09 /* AddProjectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProjectTableViewController.m; sourceTree = "<group>"; };
+		3953989D17B8AE270098B499 /* AnnotationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationTableViewController.h; sourceTree = "<group>"; };
+		3953989E17B8AE270098B499 /* AnnotationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationTableViewController.m; sourceTree = "<group>"; };
+		3959B6A217B7915C00E16109 /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = en; path = en.lproj/Annotation.h; sourceTree = "<group>"; };
+		3959B6A417B7915C00E16109 /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = en; path = en.lproj/Annotation.m; sourceTree = "<group>"; };
+		3959B6A617B7916A00E16109 /* AnnotationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationType.h; sourceTree = "<group>"; };
+		3959B6A717B7916A00E16109 /* AnnotationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationType.m; sourceTree = "<group>"; };
+		3968486117B099B200FA9D86 /* SENSRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SENSRViewController.h; sourceTree = "<group>"; };
+		3968486217B099B200FA9D86 /* SENSRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SENSRViewController.m; sourceTree = "<group>"; };
+		396A113317B44B1E00453F1A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		396EEBDC17B1E983008FB2A2 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		396EEBDD17B1E983008FB2A2 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		3982000117B04E5000528599 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3982000317B04E5000528599 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3982000617B04E5000528599 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3982000917B04E5100528599 /* SENSR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SENSR.xcdatamodel; sourceTree = "<group>"; };
-		3982000B17B04E5100528599 /* SENSRMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSRMasterViewController.h; sourceTree = "<group>"; };
-		3982000C17B04E5100528599 /* SENSRMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SENSRMasterViewController.m; sourceTree = "<group>"; };
-		3982000E17B04E5100528599 /* SENSRDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSRDetailViewController.h; sourceTree = "<group>"; };
-		3982000F17B04E5100528599 /* SENSRDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SENSRDetailViewController.m; sourceTree = "<group>"; };
+		3982001617B04ED400528599 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		3982001817B04EEE00528599 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		3982002017B0555A00528599 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryTableViewController.h; path = ../CategoryTableViewController.h; sourceTree = "<group>"; };
+		3982002117B0555A00528599 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryTableViewController.m; path = ../CategoryTableViewController.m; sourceTree = "<group>"; };
+		3982002B17B05B0900528599 /* ProjectListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectListTableViewController.h; sourceTree = "<group>"; };
+		3982002C17B05B0900528599 /* ProjectListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectListTableViewController.m; sourceTree = "<group>"; };
+		3982002E17B05EEF00528599 /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
+		3982002F17B05EEF00528599 /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
+		3982003817B0621600528599 /* ProjectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectTableViewCell.h; sourceTree = "<group>"; };
+		3982003917B0621600528599 /* ProjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectTableViewCell.m; sourceTree = "<group>"; };
+		3982003B17B0656700528599 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		3982003C17B0656700528599 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		3982003D17B0656700528599 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
+		3982003E17B0656700528599 /* fourth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fourth.png; sourceTree = "<group>"; };
 		3982FFE717B04E5000528599 /* SENSR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SENSR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3982FFEB17B04E5000528599 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3982FFED17B04E5000528599 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +117,23 @@
 		3982FFFC17B04E5000528599 /* SENSRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSRAppDelegate.h; sourceTree = "<group>"; };
 		3982FFFD17B04E5000528599 /* SENSRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SENSRAppDelegate.m; sourceTree = "<group>"; };
 		3982FFFF17B04E5000528599 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		39958DDD17B4E21D00887DF5 /* greenButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButtonHighlight.png; sourceTree = "<group>"; };
+		39958DDF17B4E23200887DF5 /* greenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButton.png; sourceTree = "<group>"; };
+		39958DE117B4E38500887DF5 /* report_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = report_btn.png; sourceTree = "<group>"; };
+		399979DC17B5833400B4E92B /* no_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_photo.png; sourceTree = "<group>"; };
+		399979DE17B5834000B4E92B /* button_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_grey.png; sourceTree = "<group>"; };
+		399979DF17B5834000B4E92B /* button_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_green.png; sourceTree = "<group>"; };
+		39B104DC17B8785300C4B09C /* blueButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		39B47D7E17B8DBE800AD5BE0 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		39B5681D17B86A910070DBCD /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButton.png; sourceTree = "<group>"; };
+		39D5323217B35611008B2427 /* FindByIdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindByIdViewController.h; sourceTree = "<group>"; };
+		39D5323317B35612008B2427 /* FindByIdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindByIdViewController.m; sourceTree = "<group>"; };
+		39DCDCD017B36DE000D955D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		39DCDCD317B36EF700D955D8 /* MyProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectViewController.h; sourceTree = "<group>"; };
+		39DCDCD417B36EF700D955D8 /* MyProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectViewController.m; sourceTree = "<group>"; };
+		39E52AF217B4BD2900174738 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		39E52AF317B4BD2900174738 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		39E52AF517B4BF5400174738 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +141,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E52AF617B4BF5400174738 /* SystemConfiguration.framework in Frameworks */,
+				396A113417B44B1E00453F1A /* CoreLocation.framework in Frameworks */,
+				39DCDCD117B36DE100D955D8 /* MapKit.framework in Frameworks */,
+				3935C0C017B1A0B20064D436 /* QuartzCore.framework in Frameworks */,
 				3982FFEC17B04E5000528599 /* UIKit.framework in Frameworks */,
 				3982FFEE17B04E5000528599 /* Foundation.framework in Frameworks */,
 				3982FFF017B04E5000528599 /* CoreGraphics.framework in Frameworks */,
@@ -81,6 +175,10 @@
 		3982FFEA17B04E5000528599 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				39E52AF517B4BF5400174738 /* SystemConfiguration.framework */,
+				396A113317B44B1E00453F1A /* CoreLocation.framework */,
+				39DCDCD017B36DE000D955D8 /* MapKit.framework */,
+				3935C0BF17B1A0B20064D436 /* QuartzCore.framework */,
 				3982FFEB17B04E5000528599 /* UIKit.framework */,
 				3982FFED17B04E5000528599 /* Foundation.framework */,
 				3982FFEF17B04E5000528599 /* CoreGraphics.framework */,
@@ -92,14 +190,50 @@
 		3982FFF317B04E5000528599 /* SENSR */ = {
 			isa = PBXGroup;
 			children = (
+				39E52AF217B4BD2900174738 /* Reachability.m */,
+				39E52AF317B4BD2900174738 /* Reachability.h */,
 				3982FFFC17B04E5000528599 /* SENSRAppDelegate.h */,
 				3982FFFD17B04E5000528599 /* SENSRAppDelegate.m */,
+				3968486117B099B200FA9D86 /* SENSRViewController.h */,
+				3968486217B099B200FA9D86 /* SENSRViewController.m */,
+				3982002017B0555A00528599 /* CategoryTableViewController.h */,
+				3982002117B0555A00528599 /* CategoryTableViewController.m */,
+				3982002B17B05B0900528599 /* ProjectListTableViewController.h */,
+				3982002C17B05B0900528599 /* ProjectListTableViewController.m */,
+				3982003817B0621600528599 /* ProjectTableViewCell.h */,
+				3982003917B0621600528599 /* ProjectTableViewCell.m */,
+				3946084A17B6FED4004BD207 /* DataTableViewCell.h */,
+				3946084B17B6FED4004BD207 /* DataTableViewCell.m */,
+				3982002E17B05EEF00528599 /* ProjectViewController.h */,
+				3982002F17B05EEF00528599 /* ProjectViewController.m */,
+				3951137717B217B600035D09 /* AddProjectTableViewController.h */,
+				3951137817B217B600035D09 /* AddProjectTableViewController.m */,
+				39005CFE17B2BDE1009BD175 /* MyProjectsTableViewController.h */,
+				39005CFF17B2BDE1009BD175 /* MyProjectsTableViewController.m */,
+				39DCDCD317B36EF700D955D8 /* MyProjectViewController.h */,
+				39DCDCD417B36EF700D955D8 /* MyProjectViewController.m */,
+				391AFD4817B4F2FA001B18A0 /* ReportTableViewController.h */,
+				391AFD4917B4F2FA001B18A0 /* ReportTableViewController.m */,
+				3953989D17B8AE270098B499 /* AnnotationTableViewController.h */,
+				3953989E17B8AE270098B499 /* AnnotationTableViewController.m */,
+				3946084717B6FD2C004BD207 /* MyDataTableViewController.h */,
+				3946084817B6FD2C004BD207 /* MyDataTableViewController.m */,
+				393534B117B8D53900C4FA06 /* DataImageViewController.h */,
+				393534B217B8D53900C4FA06 /* DataImageViewController.m */,
+				3959B6A117B7915C00E16109 /* Annotation.h */,
+				3959B6A317B7915C00E16109 /* Annotation.m */,
+				3959B6A617B7916A00E16109 /* AnnotationType.h */,
+				3959B6A717B7916A00E16109 /* AnnotationType.m */,
+				39D5323217B35611008B2427 /* FindByIdViewController.h */,
+				39D5323317B35612008B2427 /* FindByIdViewController.m */,
 				3982000517B04E5000528599 /* MainStoryboard.storyboard */,
-				3982000B17B04E5100528599 /* SENSRMasterViewController.h */,
-				3982000C17B04E5100528599 /* SENSRMasterViewController.m */,
-				3982000E17B04E5100528599 /* SENSRDetailViewController.h */,
-				3982000F17B04E5100528599 /* SENSRDetailViewController.m */,
 				3982000817B04E5100528599 /* SENSR.xcdatamodeld */,
+				394241A217B6F6D10018A7B1 /* Data.h */,
+				394241A317B6F6D10018A7B1 /* Data.m */,
+				3942419C17B6F5890018A7B1 /* Profile.h */,
+				3942419D17B6F5890018A7B1 /* Profile.m */,
+				396EEBDC17B1E983008FB2A2 /* Project.h */,
+				396EEBDD17B1E983008FB2A2 /* Project.m */,
 				3982FFF417B04E5000528599 /* Supporting Files */,
 			);
 			path = SENSR;
@@ -108,6 +242,21 @@
 		3982FFF417B04E5000528599 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				39B47D7E17B8DBE800AD5BE0 /* pin.png */,
+				39B104DC17B8785300C4B09C /* blueButtonHighlight@2x.png */,
+				39B5681D17B86A910070DBCD /* blueButton.png */,
+				399979DE17B5834000B4E92B /* button_grey.png */,
+				399979DF17B5834000B4E92B /* button_green.png */,
+				399979DC17B5833400B4E92B /* no_photo.png */,
+				39958DE117B4E38500887DF5 /* report_btn.png */,
+				39958DDF17B4E23200887DF5 /* greenButton.png */,
+				39958DDD17B4E21D00887DF5 /* greenButtonHighlight.png */,
+				3982001817B04EEE00528599 /* Default.png */,
+				3982001617B04ED400528599 /* icon.png */,
+				3982003B17B0656700528599 /* first.png */,
+				3982003C17B0656700528599 /* second.png */,
+				3982003D17B0656700528599 /* third.png */,
+				3982003E17B0656700528599 /* fourth.png */,
 				3982FFF517B04E5000528599 /* SENSR-Info.plist */,
 				3982FFF617B04E5000528599 /* InfoPlist.strings */,
 				3982FFF917B04E5000528599 /* main.m */,
@@ -176,6 +325,20 @@
 				3982000217B04E5000528599 /* Default@2x.png in Resources */,
 				3982000417B04E5000528599 /* Default-568h@2x.png in Resources */,
 				3982000717B04E5000528599 /* MainStoryboard.storyboard in Resources */,
+				3982001717B04ED400528599 /* icon.png in Resources */,
+				3982003F17B0656700528599 /* first.png in Resources */,
+				3982004017B0656700528599 /* second.png in Resources */,
+				3982004117B0656700528599 /* third.png in Resources */,
+				3982004217B0656700528599 /* fourth.png in Resources */,
+				39958DDE17B4E21D00887DF5 /* greenButtonHighlight.png in Resources */,
+				39958DE017B4E23200887DF5 /* greenButton.png in Resources */,
+				39958DE217B4E38500887DF5 /* report_btn.png in Resources */,
+				399979DD17B5833400B4E92B /* no_photo.png in Resources */,
+				399979E017B5834000B4E92B /* button_grey.png in Resources */,
+				399979E117B5834000B4E92B /* button_green.png in Resources */,
+				39B5681E17B86A910070DBCD /* blueButton.png in Resources */,
+				39B104DD17B8785300C4B09C /* blueButtonHighlight@2x.png in Resources */,
+				39B47D7F17B8DBE800AD5BE0 /* pin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,17 +349,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E52AF417B4BEDA00174738 /* Reachability.m in Sources */,
 				3982FFFA17B04E5000528599 /* main.m in Sources */,
 				3982FFFE17B04E5000528599 /* SENSRAppDelegate.m in Sources */,
 				3982000A17B04E5100528599 /* SENSR.xcdatamodeld in Sources */,
-				3982000D17B04E5100528599 /* SENSRMasterViewController.m in Sources */,
-				3982001017B04E5100528599 /* SENSRDetailViewController.m in Sources */,
+				3982002217B0555A00528599 /* CategoryTableViewController.m in Sources */,
+				3982002D17B05B0900528599 /* ProjectListTableViewController.m in Sources */,
+				3982003017B05EEF00528599 /* ProjectViewController.m in Sources */,
+				3982003A17B0621600528599 /* ProjectTableViewCell.m in Sources */,
+				3968486317B099B200FA9D86 /* SENSRViewController.m in Sources */,
+				396EEBDE17B1E984008FB2A2 /* Project.m in Sources */,
+				3951137917B217B600035D09 /* AddProjectTableViewController.m in Sources */,
+				39005D0017B2BDE1009BD175 /* MyProjectsTableViewController.m in Sources */,
+				39D5323417B35612008B2427 /* FindByIdViewController.m in Sources */,
+				39DCDCD517B36EF700D955D8 /* MyProjectViewController.m in Sources */,
+				391AFD4A17B4F2FA001B18A0 /* ReportTableViewController.m in Sources */,
+				3942419E17B6F5890018A7B1 /* Profile.m in Sources */,
+				394241A417B6F6D10018A7B1 /* Data.m in Sources */,
+				3946084917B6FD2C004BD207 /* MyDataTableViewController.m in Sources */,
+				3946084C17B6FED4004BD207 /* DataTableViewCell.m in Sources */,
+				3959B6A817B7916B00E16109 /* AnnotationType.m in Sources */,
+				3953989F17B8AE270098B499 /* AnnotationTableViewController.m in Sources */,
+				393534B317B8D53A00C4FA06 /* DataImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3959B6A117B7915C00E16109 /* Annotation.h */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3959B6A217B7915C00E16109 /* en */,
+			);
+			name = Annotation.h;
+			sourceTree = "<group>";
+		};
+		3959B6A317B7915C00E16109 /* Annotation.m */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3959B6A417B7915C00E16109 /* en */,
+			);
+			name = Annotation.m;
+			sourceTree = "<group>";
+		};
 		3982000517B04E5000528599 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -298,6 +494,7 @@
 				3982001517B04E5100528599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3982FFE117B04E5000528599 /* Build configuration list for PBXProject "SENSR" */ = {
 			isa = XCConfigurationList;

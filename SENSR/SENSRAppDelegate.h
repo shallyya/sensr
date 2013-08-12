@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SENSRAppDelegate : UIResponder <UIApplicationDelegate>
+@class MyProjectsTableViewController;
+
+@interface SENSRAppDelegate : UIResponder <UIApplicationDelegate> {
+    MyProjectsTableViewController *myProjectTableViewController;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) MyProjectsTableViewController *myProjectTableViewController;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

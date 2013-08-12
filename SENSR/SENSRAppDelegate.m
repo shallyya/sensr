@@ -7,11 +7,12 @@
 //
 
 #import "SENSRAppDelegate.h"
-
-#import "SENSRMasterViewController.h"
+#import "Project.h"
+#import "MyProjectsTableViewController.h"
 
 @implementation SENSRAppDelegate
 
+@synthesize myProjectTableViewController;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
@@ -19,9 +20,37 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    SENSRMasterViewController *controller = (SENSRMasterViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
+//    UITabBarController *tabBarController = (UITabBarController *) self.window.rootViewController;
+//    UINavigationController *navigationController = [[tabBarController viewControllers] objectAtIndex: 1];
+//    
+//    navigationController = (UINavigationController *)self.window.rootViewController;
+//    SENSRMasterViewController *controller = (SENSRMasterViewController *)navigationController.topViewController;
+//    controller.managedObjectContext = self.managedObjectContext;
+    
+    
+    
+//    NSManagedObjectContext *context = [self managedObjectContext];
+//    Project *project = [NSEntityDescription
+//                                       insertNewObjectForEntityForName:@"Project"
+//                                       inManagedObjectContext:context];
+//    [project setValue:@"Bird" forKey:@"title"];
+//
+ //   NSError *error;
+//    if (![context save:&error]) {
+//        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+//    }
+//    
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+//    NSEntityDescription *entity = [NSEntityDescription
+//                                   entityForName:@"Project" inManagedObjectContext:context];
+//    [fetchRequest setEntity:entity];
+//    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+//    for (NSManagedObject *info in fetchedObjects) {
+//        NSLog(@"Title: %@", [info valueForKey:@"title"]);
+//    }
+    
+    
+    
     return YES;
 }
 							

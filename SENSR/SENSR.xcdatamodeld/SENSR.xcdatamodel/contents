@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="11G63b" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Data" representedClassName="Data" syncable="YES">
+        <attribute name="dataImage" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDataUploaded" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="postValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tabData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="textFieldData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uniqueID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="project" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="data" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="Profile" representedClassName="Profile" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="exposeInfo" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="project" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="user" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="Project" representedClassName="Project">
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="campaignDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="expirationDate" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="filtering" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="iconImage" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="iconPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemsOrder" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="keywords" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="labelForSubmitBtn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="labelsForTab2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="labelsForTab3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="labelsForTextfield" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logoImage" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="logoPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numTab2" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="numTab3" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="numTextfield" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uniqueID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="usePhoto" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="data" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Data" inverseName="project" inverseEntity="Data" syncable="YES"/>
+        <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Profile" inverseName="project" inverseEntity="Profile" syncable="YES"/>
+        <userInfo/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Data" positionX="-612" positionY="420" width="128" height="225"/>
+        <element name="Profile" positionX="-234" positionY="504" width="128" height="135"/>
+        <element name="Project" positionX="-432" positionY="180" width="128" height="465"/>
     </elements>
 </model>
