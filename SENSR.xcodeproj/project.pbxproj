@@ -21,6 +21,7 @@
 		3968486317B099B200FA9D86 /* SENSRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3968486217B099B200FA9D86 /* SENSRViewController.m */; };
 		396A113417B44B1E00453F1A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396A113317B44B1E00453F1A /* CoreLocation.framework */; };
 		396B8CC117B974D9002322D2 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396B8CC017B974D8002322D2 /* SettingsTableViewController.m */; };
+		396B8CC317B98198002322D2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982001817B04EEE00528599 /* Default.png */; };
 		396EEBDE17B1E984008FB2A2 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 396EEBDD17B1E983008FB2A2 /* Project.m */; };
 		3982000017B04E5000528599 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982FFFF17B04E5000528599 /* Default.png */; };
 		3982000217B04E5000528599 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982000117B04E5000528599 /* Default@2x.png */; };
@@ -344,6 +345,7 @@
 				39B5681E17B86A910070DBCD /* blueButton.png in Resources */,
 				39B104DD17B8785300C4B09C /* blueButtonHighlight@2x.png in Resources */,
 				39B47D7F17B8DBE800AD5BE0 /* pin.png in Resources */,
+				396B8CC317B98198002322D2 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
