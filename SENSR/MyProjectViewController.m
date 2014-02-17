@@ -27,6 +27,7 @@
 @synthesize reportButton;
 @synthesize navBar;
 @synthesize selectedAnnotation;
+@synthesize isLocationCalled;
 
 static NSString *CALL_DATA_URL = @"http://www.sensr.org/app/callAnnotations.php";
 
@@ -39,19 +40,24 @@ static NSString *CALL_DATA_URL = @"http://www.sensr.org/app/callAnnotations.php"
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
-
+    
     self.navBar.title = project.title;
     self.mapView.delegate = self;
     self.mapView.showsUserLocation=YES;
-    self.mapView.userTrackingMode=MKUserTrackingModeFollow;
+    //self.mapView.userTrackingMode=NO;
+    
+    //[self.mapView setUserTrackingMode:MKUserTrackingModeNone animated:NO];
+    //self.mapView.userTrackingMode=MKUserTrackingModeFollow;
     //[self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
-	
-    if([self checkInternet])
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    //[self showPinData:[self callPinData]];
+    if([self checkInternet]){
         [[self locationManager] startUpdatingLocation];
-    else{
+    }else{
         UIAlertView *alert = [[UIAlertView alloc]
                               initWithTitle:@"No Internet Connection"
                               message:@"The Internet connection appears to be offline."
@@ -61,14 +67,7 @@ static NSString *CALL_DATA_URL = @"http://www.sensr.org/app/callAnnotations.php"
         [alert show];
     }
     
-    [self showPinData:[self callPinData]];
-    
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [self showPinData:[self callPinData]];
-    
-    [toolBar setFrame:CGRectMake(0, 390, 320, 70)];
+    [toolBar setFrame:CGRectMake(0, 410, 320, 70)];
     
     UIButton* button =[UIButton buttonWithType:UIButtonTypeCustom];
     [button addTarget:self action:@selector(reportButtonPressed:)
@@ -78,31 +77,48 @@ static NSString *CALL_DATA_URL = @"http://www.sensr.org/app/callAnnotations.php"
     [button setTitle:@"Report Data!" forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont boldSystemFontOfSize:19];
     button.frame = CGRectMake(115, 10, 199,50);
+    
     [toolBar addSubview:button];
 }
 
 -(void)showPinData:(NSArray *)pins{
     
-	NSMutableArray *pinArray = [[NSMutableArray alloc] init];
+   // MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(currentLocation, 800, 800);
+    //[self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    
+//	NSMutableArray *pinArray = [[NSMutableArray alloc] init];
 	NSMutableArray *mapAnnotations = [[NSMutableArray alloc] init];
 	
 	int i=0;
 	
-	float maxLatitude = currentLocation.latitude;
-	float minLatitude = currentLocation.latitude;
-	float maxLongitude = currentLocation.longitude;
-	float minLongitude = currentLocation.longitude;
+//	float maxLatitude = currentLocation.latitude;
+//	float minLatitude = currentLocation.latitude;
+//	float maxLongitude = currentLocation.longitude;
+//	float minLongitude = currentLocation.longitude;
 	
  	for(NSDictionary *data in pins){
+        
+        
+        // Add an annotation
+//        MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+//        point.coordinate = currentLocation;
+//        point.title = @"Where am I?";
+//        point.subtitle = @"I'm here!!!";
+//        [self.mapView addAnnotation:point];
+        
+        
+        
+        
+        
 		AnnotationType *annotation = [[AnnotationType alloc] init];
 		annotation.annotationData = data;
         annotation.project = project;
         
-		[pinArray addObject:data];
-		maxLatitude = (maxLatitude > [[data valueForKey:@"_latitude"] floatValue])?maxLatitude:[[data valueForKey:@"_latitude"] floatValue];
-		minLatitude = (minLatitude < [[data valueForKey:@"_latitude"] floatValue])?minLatitude:[[data valueForKey:@"_latitude"] floatValue];
-		maxLongitude = (maxLongitude > [[data valueForKey:@"_longitude"] floatValue])?maxLongitude:[[data valueForKey:@"_longitude"] floatValue];
-		minLongitude = (minLongitude < [[data valueForKey:@"_longitude"] floatValue])?minLongitude:[[data valueForKey:@"_longitude"] floatValue];
+//		[pinArray addObject:data];
+//		maxLatitude = (maxLatitude > [[data valueForKey:@"_latitude"] floatValue])?maxLatitude:[[data valueForKey:@"_latitude"] floatValue];
+//		minLatitude = (minLatitude < [[data valueForKey:@"_latitude"] floatValue])?minLatitude:[[data valueForKey:@"_latitude"] floatValue];
+//		maxLongitude = (maxLongitude > [[data valueForKey:@"_longitude"] floatValue])?maxLongitude:[[data valueForKey:@"_longitude"] floatValue];
+//		minLongitude = (minLongitude < [[data valueForKey:@"_longitude"] floatValue])?minLongitude:[[data valueForKey:@"_longitude"] floatValue];
 		
 		[mapAnnotations insertObject:annotation atIndex:i++];
         
@@ -117,38 +133,35 @@ static NSString *CALL_DATA_URL = @"http://www.sensr.org/app/callAnnotations.php"
         }
         annotation.dataDictionary = result;
         annotation.imageName = [data objectForKey:@"_imageName"];
+        
+        [mapView addAnnotation:annotation];
 	}
 	
-	CLLocation *locSouthWest = [[CLLocation alloc] initWithLatitude:minLatitude longitude:minLongitude];
-    CLLocation *locNorthEast = [[CLLocation alloc] initWithLatitude:maxLatitude longitude:maxLongitude];
-	CLLocationDistance meters = [locSouthWest distanceFromLocation:locNorthEast];
+//	CLLocation *locSouthWest = [[CLLocation alloc] initWithLatitude:minLatitude longitude:minLongitude];
+//    CLLocation *locNorthEast = [[CLLocation alloc] initWithLatitude:maxLatitude longitude:maxLongitude];
+//	CLLocationDistance meters = [locSouthWest distanceFromLocation:locNorthEast];
+//	// if there is no pin to show, set the meters manully.
+//	if (meters == 0) {
+//		meters = 10000;
+//	}
+//	MKCoordinateRegion region;
+//    region.center = currentLocation;
+//    region.span.latitudeDelta = meters / 111319.5;
+//    region.span.longitudeDelta = meters / 111319.5;//0.2;
+//	[mapView setRegion:region animated:YES];
 	
-	// if there is no pin to show, set the meters manully.
-	if (meters == 0) {
-		meters = 10000;
-	}
-	
-	MKCoordinateRegion region;
-    region.center = currentLocation;
-    region.span.latitudeDelta = 0.2;//meters / 111319.5;
-    region.span.longitudeDelta = 0.2;
-	[mapView setRegion:region animated:YES];
-	
-	[self.mapView addAnnotations:mapAnnotations];
+//	[mapView addAnnotations:mapAnnotations];
 }
 
 -(IBAction)reportButtonPressed:(id)sender{
-    //ReportTableViewController *viewController = [[ReportTableViewController alloc] init];
-    //viewController.project = project;
-    //[self presentViewController:viewController animated:YES completion:nil];
     [self performSegueWithIdentifier:@"ShowReportView" sender:nil];
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ShowReportView"]) {
         UINavigationController *navController = (UINavigationController*)[segue destinationViewController];
         ReportTableViewController *projectViewController = (ReportTableViewController*)[navController topViewController];
+        
         projectViewController.project = project;
         projectViewController.currentLocation = currentLocation;
         projectViewController.isMyData = NO;
@@ -198,29 +211,43 @@ static NSString *CALL_DATA_URL = @"http://www.sensr.org/app/callAnnotations.php"
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
-	currentLocation = newLocation.coordinate;
-    [mapView setCenterCoordinate:currentLocation animated:YES];
-    
+    currentLocation = newLocation.coordinate;
+    //[mapView setCenterCoordinate:currentLocation animated:YES];
+    if (!isLocationCalled){
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(currentLocation, 800, 800);
+        [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+        isLocationCalled = YES;
+        
+        [self showPinData:[self callPinData]];
+    }
 }
 
+
+
 - (void)mapView:(MKMapView *)view didUpdateUserLocation:(MKUserLocation *)userLocation{
-    [view setCenterCoordinate:currentLocation animated:YES];
-//    MKCoordinateRegion region;
-//	MKCoordinateSpan span;
-//	span.latitudeDelta=0.2;
-//	span.longitudeDelta=0.2;
-//	
-//	region.span=span;
-//	region.center = userLocation.coordinate;
-	currentLocation = userLocation.coordinate;
+//    NSLog(@"b");
+//    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
+//    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    
+//    if ( initialLocation == nil ){
+//        self.initialLocation = userLocation.location;
+//        MKCoordinateRegion region;
+//        region.center = mapView.userLocation.coordinate;
+//        //region.span = MKCoordinateSpanMake(0.5, 0.5);
+//        //region = [mapView regionThatFits:region];
+//        //[mapView setRegion:region animated:YES];
+//        
+//        
+//        [self showPinData:[self callPinData]];
+//    }
 }
 
 #pragma mark - MKMapViewDelegate methods.
 - (void)mapView:(MKMapView *)mv didAddAnnotationViews:(NSArray *)views {
-    MKCoordinateRegion region;
+    //MKCoordinateRegion region;
     
-    region = MKCoordinateRegionMakeWithDistance(locationManager.location.coordinate,1000,1000);
-    [mv setRegion:region animated:YES];
+    //region = MKCoordinateRegionMakeWithDistance(locationManager.location.coordinate,1000,1000);
+    //[mv setRegion:region animated:YES];
 }
 
 
@@ -233,6 +260,7 @@ static NSString *CALL_DATA_URL = @"http://www.sensr.org/app/callAnnotations.php"
 }
 
 - (void)showAnnotationData:(id)sender{
+
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {

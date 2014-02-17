@@ -190,8 +190,8 @@
         }
     }else if (indexPath.section == ABOUT_US){
         cell.textLabel.text = @"About us";
-        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-         cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+        //cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     }
     
     return cell;

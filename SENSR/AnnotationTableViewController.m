@@ -63,7 +63,6 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     project = annotation.project;
     isPhotoUsed = project.usePhoto;
 }
@@ -76,7 +75,7 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
 }
 
 - (IBAction)backButtonPressed:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
+   [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark -
@@ -120,15 +119,29 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
 
     
 	CGRect frame = CGRectMake(kLeftMargin, 4, kTextFieldWidth, kTextFieldHeight);
-    aCell.textLabel.text = [[project.labelsForTextfield componentsSeparatedByString:@"/"] objectAtIndex:numTextfield];
+    NSString *label = [[project.labelsForTextfield componentsSeparatedByString:@"/"] objectAtIndex:numTextfield];
+
+    aCell.textLabel.text = label;
     aCell.textLabel.textColor = [UIColor colorWithRed:.196 green:0.3098 blue:0.52 alpha:1.0];
     aCell.textLabel.font = [UIFont boldSystemFontOfSize:15.0];
-    
     
     UILabel *textLabel = [[UILabel alloc] initWithFrame:frame];
     textLabel.textColor = [UIColor blackColor];
     textLabel.font = [UIFont systemFontOfSize:17.0];
-    textLabel.text = [annotation.dataDictionary objectForKey:aCell.textLabel.text];
+    
+    if ([label rangeOfString:@"email"].location != NSNotFound || [label rangeOfString:@"Email"].location != NSNotFound) {
+        NSCharacterSet *doNotWant = [NSCharacterSet characterSetWithCharactersInString:@"-/:;()$&\".,?!\'[]{}#%^*+=_|~<>€£¥•."];
+        NSString *s = [[aCell.textLabel.text componentsSeparatedByCharactersInSet: doNotWant] componentsJoinedByString: @""];
+        NSArray *emails = [[annotation.dataDictionary objectForKey:s] componentsSeparatedByString: @"@"];
+        NSString *eid = [@"" stringByPaddingToLength:[[emails objectAtIndex: 0] length] withString: @"*" startingAtIndex:0];
+        NSString *address = [emails objectAtIndex:1];
+        NSString *email = [NSString stringWithFormat:@"%@@%@", eid, address];
+        textLabel.text = email;
+    }else{
+        NSCharacterSet *doNotWant = [NSCharacterSet characterSetWithCharactersInString:@"-/:;()$&@\".,?!\'[]{}#%^*+=_|~<>€£¥•."];
+        NSString *s = [[aCell.textLabel.text componentsSeparatedByCharactersInSet: doNotWant] componentsJoinedByString: @""];
+        textLabel.text = [annotation.dataDictionary objectForKey:s];
+    }
     
     [aCell addSubview:textLabel];
 
@@ -169,6 +182,7 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     NSArray * allKeys = [annotation.dataDictionary allKeys];
     NSInteger rows = [allKeys count] + 3;
     
@@ -181,11 +195,13 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
 				break;
 		}
 	}
+    
 	return rows;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 	CGFloat height = 0.0f;
 	if(isPhotoUsed){
 		if(indexPath.section == PHOTO_SECTION)
@@ -283,6 +299,10 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
     return headerTitle;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 35.0;
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -303,7 +323,7 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
 - (void)showPhotoSectionWithCell:(UITableViewCell*)aCell{
     
     UIImage *image = nil;
-    NSString *urlString = [NSString stringWithFormat:@"http://www.sensr.org/app/uploaded/%@",annotation.imageName];
+    NSString *urlString = [NSString stringWithFormat:@"http://www.sensr.org/app/uploaded/%@.jpg",annotation.imageName];
     NSData *d = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
     image = [UIImage imageWithData:d];
     
@@ -331,7 +351,6 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
     if ([segue.identifier isEqualToString:@"ShowAnnotationImage"]) {
         
         NSString *urlString = [NSString stringWithFormat:@"http://www.sensr.org/app/uploaded/%@",annotation.imageName];

@@ -90,13 +90,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"ProjectCell";
-    
     ProjectTableViewCell *projectCell = (ProjectTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (projectCell == nil) {
         projectCell = [[ProjectTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-		projectCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		
     }
-    
+    projectCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	[self configureCell:projectCell atIndexPath:indexPath];
     
     return projectCell;
@@ -193,6 +192,7 @@
      */
     
     Project *p = [_fetchedResultsController objectAtIndexPath:indexPath];
+
     [self performSegueWithIdentifier:@"MyProjectFromMyList" sender:p];
 }
 
@@ -203,6 +203,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"MyProjectFromMyList"]) {
+        
         MyProjectViewController *projectViewController = segue.destinationViewController;
         projectViewController.project =sender;
     }

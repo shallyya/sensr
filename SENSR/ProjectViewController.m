@@ -9,6 +9,7 @@
 #import "ProjectViewController.h"
 #import "Project.h"
 #import "SENSRAppDelegate.h"
+#import "Reachability.h"
 
 @interface ProjectViewController ()
 
@@ -31,6 +32,9 @@
 @synthesize isMyproject;
 @synthesize toolBar;
 @synthesize scrollView;
+
+
+static NSString *ADD_PARTICIPANT_URL = @"http://www.sensr.org/app/addParticipant.php";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -70,14 +74,25 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    [toolBar setFrame:CGRectMake(0, 350, 320, 70)];
+    //toolBar = [[UIToolbar alloc] init];
+    [toolBar setFrame:CGRectMake(0, 410, 320, 70)];
+    [toolBar setBarStyle:UIBarStyleBlack];
+    toolBar.translucent = YES;
+    
+    
+//    const float colorMask[6] = {222, 255, 222, 255, 222, 255};
+//    UIImage *img = [[UIImage alloc] init];
+//    UIImage *maskedImage = [UIImage imageWithCGImage: CGImageCreateWithMaskingColors(img.CGImage, colorMask)];
+//    
+//    [toolBar setBackgroundImage:maskedImage forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
+//    toolBar.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
     
     UIButton* button =[UIButton buttonWithType:UIButtonTypeCustom];
     [button addTarget:self action:@selector(participateButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     UIImage *buttonImage = [UIImage imageNamed:@"blueButton.png"];
     UIImage *stretchedBackground = [buttonImage stretchableImageWithLeftCapWidth:10 topCapHeight:0];
     [button setBackgroundImage:stretchedBackground forState:UIControlStateNormal];
-    [button setTitle:@"Participate" forState:UIControlStateNormal];
+    [button setTitle:@"Participate it!" forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont boldSystemFontOfSize:19];
     button.frame = CGRectMake(115, 10, 199,50);
     [toolBar addSubview:button];
@@ -123,7 +138,7 @@
         description.frame   = rect;
 
         
-        [scrollView setContentSize:(CGSizeMake(320, 330+rect.size.height))];
+        [scrollView setContentSize:(CGSizeMake(320, 300+rect.size.height))];
     }
     
     NSArray *t = [[projectDictionary objectForKey:@"location"] componentsSeparatedByString:@","] ;
@@ -150,10 +165,30 @@
             isNewProject = NO;
     }
     
-    if(isNewProject)
+    if(isNewProject){
+        NSURL *add_p_url = [NSURL URLWithString: ADD_PARTICIPANT_URL];
+        NSString *post = [NSString stringWithFormat:@"uniqueID=%@", newId];
+        NSData *postData= [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+        NSString *postLength = [NSString stringWithFormat:@"%d",[post length]];
+        
+        if([self checkInternet]){
+            NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:add_p_url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+            
+            [request setURL:add_p_url];
+            [request setHTTPMethod:@"POST"];
+            [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+            [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+            [request setHTTPBody:postData];
+            NSData *serverReply = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+            NSString *replyString = [[NSString alloc] initWithBytes:[serverReply bytes] length:[serverReply length] encoding: NSUTF8StringEncoding];
+            NSLog(@"%@",replyString);
+        }
+        
+        
         [self showAlert:@"confirm"];
-    else
+    }else{
         [self showAlert:@"duplicate"];
+    }
 }
 
 - (void)showAlert:(NSString*)notice{
@@ -189,8 +224,11 @@
 
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 0) {
-        //[self.navigationController popToRootViewControllerAnimated:YES];
-        [self.navigationController popViewControllerAnimated:YES];
+//        [self dismissViewControllerAnimated:YES completion:^{
+//            [self.navigationController popToRootViewControllerAnimated:YES];
+//        }];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        //[self.navigationController popViewControllerAnimated:YES];
     }else if(buttonIndex == 1){
         [self saveProject];
     }
@@ -201,6 +239,10 @@
     Project *newProject = [NSEntityDescription
                         insertNewObjectForEntityForName:@"Project"
                         inManagedObjectContext:context];
+    
+    NSString *labelsForTextfield = [[projectDictionary objectForKey:@"labelsForTextfield"] stringByReplacingOccurrencesOfString:@"?" withString:@""];
+    NSString *labelsForTab2 = [[projectDictionary objectForKey:@"labelsForTab2"] stringByReplacingOccurrencesOfString:@"?" withString:@""];
+    NSString *labelsForTab3 = [[projectDictionary objectForKey:@"labelsForTab3"] stringByReplacingOccurrencesOfString:@"?" withString:@""];
     
     NSNumber *expirationDate =[ NSNumber numberWithInt:[[projectDictionary objectForKey:@"expirationDate"] intValue]];
     NSNumber *numTab2 = [ NSNumber numberWithInt:[[projectDictionary objectForKey:@"numTab2"] intValue]];
@@ -217,9 +259,9 @@
     [newProject setValue:[projectDictionary objectForKey:@"itemsOrder"] forKey:@"itemsOrder"];
     [newProject setValue:[projectDictionary objectForKey:@"keywords"] forKey:@"keywords"];
     [newProject setValue:[projectDictionary objectForKey:@"labelForSubmitBtn"] forKey:@"labelForSubmitBtn"];
-    [newProject setValue:[projectDictionary objectForKey:@"labelsForTab2"] forKey:@"labelsForTab2"];
-    [newProject setValue:[projectDictionary objectForKey:@"labelsForTab3"] forKey:@"labelsForTab3"];
-    [newProject setValue:[projectDictionary objectForKey:@"labelsForTextfield"] forKey:@"labelsForTextfield"];
+    [newProject setValue:labelsForTab2 forKey:@"labelsForTab2"];
+    [newProject setValue:labelsForTab3 forKey:@"labelsForTab3"];
+    [newProject setValue:labelsForTextfield forKey:@"labelsForTextfield"];
     [newProject setValue:[projectDictionary objectForKey:@"state"] forKey:@"location"];
     [newProject setValue:[projectDictionary objectForKey:@"logoPath"] forKey:@"logoPath"];
     [newProject setValue:[projectDictionary objectForKey:@"uniqueID"] forKey:@"uniqueID"];
@@ -257,6 +299,22 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark -
+#pragma mark Check Connectivity
+
+- (BOOL)checkInternet{
+    Reachability *r = [Reachability reachabilityWithHostname:@"www.google.com"];
+    NetworkStatus internetStatus = [r currentReachabilityStatus];
+    
+    BOOL internet;
+    if ((internetStatus != ReachableViaWiFi) && (internetStatus != ReachableViaWWAN))
+        internet = NO;
+    else
+        internet = YES;
+    
+    return internet;
 }
 
 #pragma mark -

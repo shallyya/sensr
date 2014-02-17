@@ -11,7 +11,7 @@
 #import "Project.h"
 #import "Data.h"
 
-@interface ReportTableViewController : UITableViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UIAlertViewDelegate>{
+@interface ReportTableViewController : UITableViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UIAlertViewDelegate, UIActionSheetDelegate>{
     NSUserDefaults *prefs;
     UIButton *cancelButton;
     Project *project;

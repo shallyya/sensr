@@ -25,6 +25,7 @@
 @property (nonatomic, retain) Project *project;
 @property (nonatomic, retain) Data *selectedAnnotation;
 
+@property (nonatomic, readwrite) BOOL isLocationCalled;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolBar;

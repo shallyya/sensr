@@ -15,17 +15,16 @@
 		394241A417B6F6D10018A7B1 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 394241A317B6F6D10018A7B1 /* Data.m */; };
 		3946084917B6FD2C004BD207 /* MyDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3946084817B6FD2C004BD207 /* MyDataTableViewController.m */; };
 		3946084C17B6FED4004BD207 /* DataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3946084B17B6FED4004BD207 /* DataTableViewCell.m */; };
+		394D6990186FCBFE00AA3D34 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 394D698F186FCBFE00AA3D34 /* Default-568h@2x.png */; };
+		394D6992186FCD6700AA3D34 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 394D6991186FCD6700AA3D34 /* Default.png */; };
+		394D6994186FD00C00AA3D34 /* icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 394D6993186FD00C00AA3D34 /* icon_120.png */; };
 		3951137917B217B600035D09 /* AddProjectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3951137817B217B600035D09 /* AddProjectTableViewController.m */; };
 		3953989F17B8AE270098B499 /* AnnotationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3953989E17B8AE270098B499 /* AnnotationTableViewController.m */; };
 		3959B6A817B7916B00E16109 /* AnnotationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3959B6A717B7916A00E16109 /* AnnotationType.m */; };
 		3968486317B099B200FA9D86 /* SENSRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3968486217B099B200FA9D86 /* SENSRViewController.m */; };
 		396A113417B44B1E00453F1A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396A113317B44B1E00453F1A /* CoreLocation.framework */; };
 		396B8CC117B974D9002322D2 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396B8CC017B974D8002322D2 /* SettingsTableViewController.m */; };
-		396B8CC317B98198002322D2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982001817B04EEE00528599 /* Default.png */; };
 		396EEBDE17B1E984008FB2A2 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 396EEBDD17B1E983008FB2A2 /* Project.m */; };
-		3982000017B04E5000528599 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982FFFF17B04E5000528599 /* Default.png */; };
-		3982000217B04E5000528599 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982000117B04E5000528599 /* Default@2x.png */; };
-		3982000417B04E5000528599 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982000317B04E5000528599 /* Default-568h@2x.png */; };
 		3982000717B04E5000528599 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3982000517B04E5000528599 /* MainStoryboard.storyboard */; };
 		3982000A17B04E5100528599 /* SENSR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3982000817B04E5100528599 /* SENSR.xcdatamodeld */; };
 		3982001717B04ED400528599 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3982001617B04ED400528599 /* icon.png */; };
@@ -78,6 +77,9 @@
 		3946084817B6FD2C004BD207 /* MyDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDataTableViewController.m; sourceTree = "<group>"; };
 		3946084A17B6FED4004BD207 /* DataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewCell.h; sourceTree = "<group>"; };
 		3946084B17B6FED4004BD207 /* DataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewCell.m; sourceTree = "<group>"; };
+		394D698F186FCBFE00AA3D34 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		394D6991186FCD6700AA3D34 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		394D6993186FD00C00AA3D34 /* icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120.png; sourceTree = "<group>"; };
 		3951137717B217B600035D09 /* AddProjectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProjectTableViewController.h; sourceTree = "<group>"; };
 		3951137817B217B600035D09 /* AddProjectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProjectTableViewController.m; sourceTree = "<group>"; };
 		3953989D17B8AE270098B499 /* AnnotationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationTableViewController.h; sourceTree = "<group>"; };
@@ -93,12 +95,9 @@
 		396B8CC017B974D8002322D2 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		396EEBDC17B1E983008FB2A2 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		396EEBDD17B1E983008FB2A2 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
-		3982000117B04E5000528599 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		3982000317B04E5000528599 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3982000617B04E5000528599 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3982000917B04E5100528599 /* SENSR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SENSR.xcdatamodel; sourceTree = "<group>"; };
 		3982001617B04ED400528599 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
-		3982001817B04EEE00528599 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		3982002017B0555A00528599 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryTableViewController.h; path = ../CategoryTableViewController.h; sourceTree = "<group>"; };
 		3982002117B0555A00528599 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryTableViewController.m; path = ../CategoryTableViewController.m; sourceTree = "<group>"; };
 		3982002B17B05B0900528599 /* ProjectListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectListTableViewController.h; sourceTree = "<group>"; };
@@ -122,7 +121,6 @@
 		3982FFFB17B04E5000528599 /* SENSR-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SENSR-Prefix.pch"; sourceTree = "<group>"; };
 		3982FFFC17B04E5000528599 /* SENSRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSRAppDelegate.h; sourceTree = "<group>"; };
 		3982FFFD17B04E5000528599 /* SENSRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SENSRAppDelegate.m; sourceTree = "<group>"; };
-		3982FFFF17B04E5000528599 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		398CD08217B9900A00984475 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		398CD08317B9900A00984475 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 		398CD08917B9930E00984475 /* Grass_Sky_Tree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grass_Sky_Tree.jpg; sourceTree = "<group>"; };
@@ -255,7 +253,9 @@
 		3982FFF417B04E5000528599 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				394D6991186FCD6700AA3D34 /* Default.png */,
 				39B47D7E17B8DBE800AD5BE0 /* pin.png */,
+				394D698F186FCBFE00AA3D34 /* Default-568h@2x.png */,
 				398CD08917B9930E00984475 /* Grass_Sky_Tree.jpg */,
 				39B104DC17B8785300C4B09C /* blueButtonHighlight@2x.png */,
 				39B5681D17B86A910070DBCD /* blueButton.png */,
@@ -265,8 +265,8 @@
 				39958DE117B4E38500887DF5 /* report_btn.png */,
 				39958DDF17B4E23200887DF5 /* greenButton.png */,
 				39958DDD17B4E21D00887DF5 /* greenButtonHighlight.png */,
-				3982001817B04EEE00528599 /* Default.png */,
 				3982001617B04ED400528599 /* icon.png */,
+				394D6993186FD00C00AA3D34 /* icon_120.png */,
 				3982003B17B0656700528599 /* first.png */,
 				3982003C17B0656700528599 /* second.png */,
 				3982003D17B0656700528599 /* third.png */,
@@ -275,9 +275,6 @@
 				3982FFF617B04E5000528599 /* InfoPlist.strings */,
 				3982FFF917B04E5000528599 /* main.m */,
 				3982FFFB17B04E5000528599 /* SENSR-Prefix.pch */,
-				3982FFFF17B04E5000528599 /* Default.png */,
-				3982000117B04E5000528599 /* Default@2x.png */,
-				3982000317B04E5000528599 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -311,6 +308,11 @@
 				CLASSPREFIX = SENSR;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Sunyoung Kim";
+				TargetAttributes = {
+					3982FFE617B04E5000528599 = {
+						DevelopmentTeam = CM5LE8SSCD;
+					};
+				};
 			};
 			buildConfigurationList = 3982FFE117B04E5000528599 /* Build configuration list for PBXProject "SENSR" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -335,25 +337,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				3982FFF817B04E5000528599 /* InfoPlist.strings in Resources */,
-				3982000017B04E5000528599 /* Default.png in Resources */,
-				3982000217B04E5000528599 /* Default@2x.png in Resources */,
-				3982000417B04E5000528599 /* Default-568h@2x.png in Resources */,
 				3982000717B04E5000528599 /* MainStoryboard.storyboard in Resources */,
 				3982001717B04ED400528599 /* icon.png in Resources */,
 				3982003F17B0656700528599 /* first.png in Resources */,
 				3982004017B0656700528599 /* second.png in Resources */,
 				3982004117B0656700528599 /* third.png in Resources */,
+				394D6994186FD00C00AA3D34 /* icon_120.png in Resources */,
 				3982004217B0656700528599 /* fourth.png in Resources */,
 				39958DDE17B4E21D00887DF5 /* greenButtonHighlight.png in Resources */,
 				39958DE017B4E23200887DF5 /* greenButton.png in Resources */,
 				39958DE217B4E38500887DF5 /* report_btn.png in Resources */,
 				399979DD17B5833400B4E92B /* no_photo.png in Resources */,
+				394D6992186FCD6700AA3D34 /* Default.png in Resources */,
 				399979E017B5834000B4E92B /* button_grey.png in Resources */,
+				394D6990186FCBFE00AA3D34 /* Default-568h@2x.png in Resources */,
 				399979E117B5834000B4E92B /* button_green.png in Resources */,
 				39B5681E17B86A910070DBCD /* blueButton.png in Resources */,
 				39B104DD17B8785300C4B09C /* blueButtonHighlight@2x.png in Resources */,
 				39B47D7F17B8DBE800AD5BE0 /* pin.png in Resources */,
-				396B8CC317B98198002322D2 /* Default.png in Resources */,
 				398CD08A17B9930E00984475 /* Grass_Sky_Tree.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,7 +440,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Eric Paulos (CM5LE8SSCD)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -454,6 +455,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -467,7 +469,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Eric Paulos (CM5LE8SSCD)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -475,6 +477,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -483,10 +486,14 @@
 		3982001417B04E5100528599 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eric Paulos (HXRBNSMZMZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eric Paulos (HXRBNSMZMZ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SENSR/SENSR-Prefix.pch";
 				INFOPLIST_FILE = "SENSR/SENSR-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -494,10 +501,14 @@
 		3982001517B04E5100528599 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eric Paulos (HXRBNSMZMZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SENSR/SENSR-Prefix.pch";
 				INFOPLIST_FILE = "SENSR/SENSR-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

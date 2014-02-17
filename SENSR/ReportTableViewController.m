@@ -56,7 +56,7 @@
 #define kNumberFieldWidth	    70.0
 
 #define originX 160
-#define originY 208
+#define originY 240
 
 static NSString *SAVE_IMAGE_URL = @"http://www.sensr.org/app/saveImage.php";
 static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
@@ -89,6 +89,7 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
         cancelButton.titleLabel.text = @"Back";
         self.title = project.title;
     }
+    
     isPhotoUsed = project.usePhoto;
     isPhotoLoaded = NO;
     
@@ -248,7 +249,7 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
         textField.font = [UIFont systemFontOfSize:17.0];
         textField.backgroundColor = [UIColor whiteColor];
         textField.autocorrectionType = UITextAutocorrectionTypeNo;
-        textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+        textField.keyboardType = UIKeyboardTypeAlphabet;
         textField.returnKeyType = UIReturnKeyDone;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.delegate = self;
@@ -397,7 +398,7 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
-        
+
     }else{
         // convert array data to save
         NSString *textfieldDataString = @"";
@@ -413,7 +414,7 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
             else if([class isEqualToString:@"tab"])
                 tabDataString = [tabDataString stringByAppendingString:[NSString stringWithFormat:@"%@/",value]];
         }
-        
+
         NSMutableDictionary *dataToSave = [[NSMutableDictionary alloc] init];
         [dataToSave setValue:textfieldDataString forKey:@"textFieldData"];
         [dataToSave setValue:tabDataString forKey:@"tabData"];
@@ -424,17 +425,26 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
         [dataToSave setObject:project.uniqueID forKey:@"uniqueID"];
         
         // create a post string to save
-        NSString *imageName = [NSString stringWithFormat:@"%@_%@.jpg", project.uniqueID,[NSNumber numberWithInt:[[NSDate date] timeIntervalSince1970]]];
-        NSString *post = [NSString stringWithFormat:@"uniqueID=%@&_reported_timestamp=%0.0f&_latitude=%f&_longitude=%f", project.uniqueID, [[NSDate date] timeIntervalSince1970], currentLocation.latitude, currentLocation.longitude];
+        NSString *imageName = [NSString stringWithFormat:@"%@_%@", project.uniqueID,[NSNumber numberWithInt:[[NSDate date] timeIntervalSince1970]]];
+        NSString *post = [NSString stringWithFormat:@"uniqueID=%@&_latitude=%f&_longitude=%f", project.uniqueID, currentLocation.latitude, currentLocation.longitude];
+        //NSString *post = [NSString stringWithFormat:@"uniqueID=%@&_reported_timestamp=%0.0f&_latitude=%f&_longitude=%f", project.uniqueID, [[NSDate date] timeIntervalSince1970], currentLocation.latitude, currentLocation.longitude];
         
         if([prefs boolForKey:@"ExposeProfile"]){
-            post = [post stringByAppendingString:@"&_userName='"];
-            post = [post stringByAppendingString:[prefs objectForKey:@"Name"]];
-            post = [post stringByAppendingString:@"'&_userEmail='"];
-            post = [post stringByAppendingString:[prefs objectForKey:@"Email"]];
-            post = [post stringByAppendingString:@"'&_location='"];
-            post = [post stringByAppendingString:[prefs objectForKey:@"Location"]];
-            post = [post stringByAppendingString:@"''"];
+            if([prefs objectForKey:@"Name"] != nil){
+                post = [post stringByAppendingString:@"&_userName='"];
+                post = [post stringByAppendingString:[prefs objectForKey:@"Name"]];
+                post = [post stringByAppendingString:@"'"];
+            }
+            if([prefs objectForKey:@"Email"] != nil){
+                post = [post stringByAppendingString:@"'&_userEmail='"];
+                post = [post stringByAppendingString:[prefs objectForKey:@"Email"]];
+                post = [post stringByAppendingString:@"'"];
+            }
+            if([prefs objectForKey:@"Location"] != nil){
+                post = [post stringByAppendingString:@"'&_location='"];
+                post = [post stringByAppendingString:[prefs objectForKey:@"Location"]];
+                post = [post stringByAppendingString:@"'"];
+            }
         }
         
         for(int i=0;i<[dataToUpload count];i++){
@@ -512,7 +522,7 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
 - (BOOL)uploadImage:(NSString*)imageName{
     BOOL isImageUploaded = NO;
     UIImage *image = dataImage;
-    NSString *i = imageName;
+    NSString *i = [NSString stringWithFormat:@"%@.jpg", imageName];
     
     NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
     NSURL *imageUrl = [NSURL URLWithString:SAVE_IMAGE_URL];
@@ -766,6 +776,10 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 35.0;
+}
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     NSString *headerTitle = nil;
     if(!isPhotoUsed)
@@ -833,7 +847,7 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
         [pButton addTarget:self action:@selector(showImage) forControlEvents:UIControlEventTouchUpInside];
         
     }else{
-        [pButton setTitle:@"Take Photo" forState:UIControlStateNormal];
+        [pButton setTitle:@"Take A Photo" forState:UIControlStateNormal];
         [pButton addTarget:self action:@selector(takePhoto) forControlEvents:UIControlEventTouchUpInside];
         
         image = [UIImage imageNamed:@"no_photo.png"];
@@ -855,14 +869,50 @@ static NSString *SAVE_DATA_URL = @"http://www.sensr.org/app/saveData.php";
     }
 }
 
+
+#pragma mark -
+#pragma mark UIActionSheetDelegate
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    int i = buttonIndex;
+    switch(i)
+    {
+        case 0:
+        {
+            UIImagePickerController * picker = [[UIImagePickerController alloc] init];
+            picker.delegate = self;
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            [self presentViewController:picker animated:YES completion:^{}];
+        }
+            break;
+        case 1:
+        {
+            UIImagePickerController * picker = [[UIImagePickerController alloc] init];
+            picker.delegate = self;
+            picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            [self presentViewController:picker animated:YES completion:^{}];
+        }
+        default:
+            break;
+    }
+}
+
 - (void)takePhoto{
     if(!isMyData){
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
-        BOOL camAvail = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
-        picker.sourceType = (camAvail?UIImagePickerControllerSourceTypeCamera:UIImagePickerControllerSourceTypePhotoLibrary);
-	
-        [self presentViewController:picker animated:YES completion:nil];
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Add a Photo to Report a Data"
+                                                                 delegate:self
+                                                        cancelButtonTitle:@"Cancel"
+                                                   destructiveButtonTitle:nil
+                                                        otherButtonTitles:@"Camera", @"Select from Library", nil];
+        actionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
+        [actionSheet showInView:self.view];
+        
+//        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+//        picker.delegate = self;
+//        BOOL camAvail = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+//        picker.sourceType = (camAvail?UIImagePickerControllerSourceTypeCamera:UIImagePickerControllerSourceTypePhotoLibrary);
+//	
+//        [self presentViewController:picker animated:YES completion:nil];
     }
 }
 

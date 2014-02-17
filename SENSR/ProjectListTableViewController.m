@@ -85,6 +85,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         ProjectViewController *projectViewController = segue.destinationViewController;
         projectViewController.projectDictionary = [projects objectAtIndex:indexPath.row];
+        
     }
 }
 

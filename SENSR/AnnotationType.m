@@ -15,7 +15,6 @@
 
 -(id)initWithCoordinate:(CLLocationCoordinate2D) c{
 	theCoordinate=c;
-	//NSLog(@"%f,%f",c.latitude,c.longitude);
 	return self;
 }
 
@@ -29,8 +28,7 @@
 - (NSString *)title{
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 	[formatter setDateFormat:@"Y/M/dd HH:mm:ss"];
-	
-	NSString *stringFromDate = [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:[[[annotationData valueForKey:@"_reported_timestamp"] description] intValue] ]];
+	NSString *stringFromDate = [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:[[[annotationData valueForKey:@"_timestamp"] description] intValue] ]];
 	
 	return stringFromDate;
 }
